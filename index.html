@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residenza Galis - Appartamento Vacanze Argenta</title>
+    <meta name="description" content="Appartamento accogliente nel cuore di Argenta, ideale per business travelers e soggiorni di lavoro">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h2 class="nav-logo">Residenza Galis</h2>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#appartamento" class="nav-link">Appartamento</a>
+                    <a href="#prenotazioni" class="nav-link">Prenota</a>
+                    <a href="#zona" class="nav-link">Zona</a>
+                    <a href="#contatti" class="nav-link">Contatti</a>
+                </div>
+                <button class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Benvenuto alla Residenza Galis</h1>
+                    <p class="hero-subtitle">Appartamento accogliente nel cuore di Argenta, ideale per business travelers e soggiorni di lavoro</p>
+                    <button class="btn btn--primary btn--lg hero-cta" onclick="scrollToBooking()">Prenota Ora</button>
+                </div>
+                <div class="hero-image">
+                    <div class="placeholder-image">
+                        <div class="placeholder-content">
+                            <p>Foto principale appartamento</p>
+                            <small>Immagine da smartphone</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Widget Ricerca Rapida -->
+            <div class="search-widget">
+                <div class="search-form">
+                    <div class="search-field">
+                        <label class="form-label">Check-in</label>
+                        <input type="date" id="quick-checkin" class="form-control" min="">
+                    </div>
+                    <div class="search-field">
+                        <label class="form-label">Check-out</label>
+                        <input type="date" id="quick-checkout" class="form-control" min="">
+                    </div>
+                    <div class="search-field">
+                        <label class="form-label">Ospiti</label>
+                        <select id="quick-guests" class="form-control">
+                            <option value="1">1 Ospite</option>
+                            <option value="2" selected>2 Ospiti</option>
+                            <option value="3">3 Ospiti</option>
+                            <option value="4">4 Ospiti</option>
+                            <option value="5">5 Ospiti</option>
+                        </select>
+                    </div>
+                    <button class="btn btn--primary search-btn" onclick="quickSearch()">Verifica Disponibilità</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appartamento Section -->
+    <section id="appartamento" class="appartamento">
+        <div class="container">
+            <div class="section-header">
+                <h2>Il Tuo Appartamento</h2>
+                <p class="section-subtitle">Spazio moderno e confortevole per il tuo soggiorno</p>
+            </div>
+            
+            <!-- Galleria Foto -->
+            <div class="gallery">
+                <div class="gallery-main">
+                    <div class="placeholder-image">
+                        <div class="placeholder-content">
+                            <p>Foto principale soggiorno</p>
+                            <small>Galleria da smartphone</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <div class="placeholder-image">
+                        <div class="placeholder-content">
+                            <p>Camera 1</p>
+                        </div>
+                    </div>
+                    <div class="placeholder-image">
+                        <div class="placeholder-content">
+                            <p>Camera 2</p>
+                        </div>
+                    </div>
+                    <div class="placeholder-image">
+                        <div class="placeholder-content">
+                            <p>Cucina</p>
+                        </div>
+                    </div>
+                    <div class="placeholder-image">
+                        <div class="placeholder-content">
+                            <p>Bagno</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dettagli Appartamento -->
+            <div class="appartamento-details">
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h3>Due Camere da Letto</h3>
+                        <p>Camera matrimoniale principale con armadio a muro e camera singola/doppia ideale per ospiti aggiuntivi.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Soggiorno e Cucina</h3>
+                        <p>Open space luminoso con cucina completamente attrezzata, tavolo da pranzo e area relax con TV.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Bagno Moderno</h3>
+                        <p>Bagno completo con doccia, lavatrice e tutti i comfort necessari per il tuo soggiorno.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Capacità</h3>
+                        <p><strong>4-5 persone</strong> in 100 mq di spazio confortevole e ben organizzato.</p>
+                    </div>
+                </div>
+
+                <!-- Servizi -->
+                <div class="servizi">
+                    <h3>Servizi Inclusi</h3>
+                    <div class="servizi-grid">
+                        <div class="servizio-item">WiFi gratuito</div>
+                        <div class="servizio-item">Cucina completa</div>
+                        <div class="servizio-item">Biancheria inclusa</div>
+                        <div class="servizio-item">Parcheggio</div>
+                        <div class="servizio-item">Riscaldamento</div>
+                        <div class="servizio-item">Aria condizionata</div>
+                    </div>
+                </div>
+
+                <!-- Posizione -->
+                <div class="posizione">
+                    <h3>Posizione Centrale</h3>
+                    <p>Nel cuore di Argenta, a pochi passi dall'ospedale Mazzolani-Vandini e dalle scuole locali. Perfetto per chi ha necessità di essere vicino ai servizi principali.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Engine -->
+    <section id="prenotazioni" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2>Prenota il Tuo Soggiorno</h2>
+                <p class="section-subtitle">Sistema di prenotazione integrato con prezzi dinamici</p>
+            </div>
+
+            <div class="booking-content">
+                <!-- Calendario -->
+                <div class="booking-calendar">
+                    <h3>Seleziona le Date</h3>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="btn btn--outline" id="prev-month">&lt;</button>
+                            <h4 id="current-month"></h4>
+                            <button class="btn btn--outline" id="next-month">&gt;</button>
+                        </div>
+                        <div class="calendar-grid" id="calendar-grid"></div>
+                    </div>
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <div class="legend-color available"></div>
+                            <span>Disponibile</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color selected"></div>
+                            <span>Selezionato</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color occupied"></div>
+                            <span>Occupato</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Prenotazione -->
+                <div class="booking-form">
+                    <h3>Dettagli Prenotazione</h3>
+                    
+                    <!-- Selezione Target -->
+                    <div class="form-group">
+                        <label class="form-label">Tipo di Soggiorno</label>
+                        <select id="target-type" class="form-control" onchange="updatePricing()">
+                            <option value="business">Business (€75/notte)</option>
+                            <option value="turisti_weekend">Turista Weekend (€85/notte)</option>
+                            <option value="insegnanti">Insegnante (€55/notte)</option>
+                            <option value="degenti">Parenti Degenti (€65/notte)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Data Check-in</label>
+                            <input type="date" id="booking-checkin" class="form-control" min="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Data Check-out</label>
+                            <input type="date" id="booking-checkout" class="form-control" min="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Numero Ospiti</label>
+                        <select id="booking-guests" class="form-control">
+                            <option value="1">1 Ospite</option>
+                            <option value="2" selected>2 Ospiti</option>
+                            <option value="3">3 Ospiti</option>
+                            <option value="4">4 Ospiti</option>
+                            <option value="5">5 Ospiti</option>
+                        </select>
+                    </div>
+
+                    <!-- Calcolo Prezzi -->
+                    <div class="pricing-summary" id="pricing-summary" style="display: none;">
+                        <div class="pricing-row">
+                            <span>Prezzo per notte:</span>
+                            <span id="price-per-night">€0</span>
+                        </div>
+                        <div class="pricing-row">
+                            <span>Numero notti:</span>
+                            <span id="total-nights">0</span>
+                        </div>
+                        <div class="pricing-row">
+                            <span>Subtotale:</span>
+                            <span id="subtotal">€0</span>
+                        </div>
+                        <div class="pricing-row discount" id="discount-row" style="display: none;">
+                            <span id="discount-text">Sconto:</span>
+                            <span id="discount-amount">€0</span>
+                        </div>
+                        <div class="pricing-row total">
+                            <strong>
+                                <span>Totale:</span>
+                                <span id="total-price">€0</span>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Informazioni Contatto -->
+                    <div class="form-group">
+                        <label class="form-label">Nome e Cognome *</label>
+                        <input type="text" id="guest-name" class="form-control" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" id="guest-email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Telefono *</label>
+                            <input type="tel" id="guest-phone" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Note Speciali</label>
+                        <textarea id="special-notes" class="form-control" rows="4" placeholder="Richieste particolari, orari di arrivo, esigenze speciali..."></textarea>
+                    </div>
+
+                    <button class="btn btn--primary btn--full-width" onclick="submitBooking()">Conferma Prenotazione</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zona e Attrazioni -->
+    <section id="zona" class="zona-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zona e Attrazioni</h2>
+                <p class="section-subtitle">Scopri la bellezza di Argenta e dintorni</p>
+            </div>
+
+            <div class="zona-content">
+                <div class="mappa-container">
+                    <div class="placeholder-image mappa-placeholder">
+                        <div class="placeholder-content">
+                            <p>Mappa Interattiva</p>
+                            <small>Posizione Residenza Galis</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="distanze-info">
+                    <div class="distanze-grid">
+                        <div class="distanza-item">
+                            <h4>Ospedale Mazzolani-Vandini</h4>
+                            <span class="distanza">5 minuti a piedi</span>
+                        </div>
+                        <div class="distanza-item">
+                            <h4>Stazione Ferroviaria</h4>
+                            <span class="distanza">10 minuti a piedi</span>
+                        </div>
+                        <div class="distanza-item">
+                            <h4>Valli di Argenta</h4>
+                            <span class="distanza">15 minuti auto</span>
+                        </div>
+                        <div class="distanza-item">
+                            <h4>Bologna</h4>
+                            <span class="distanza">40 minuti treno</span>
+                        </div>
+                        <div class="distanza-item">
+                            <h4>Ferrara</h4>
+                            <span class="distanza">35 minuti auto</span>
+                        </div>
+                        <div class="distanza-item">
+                            <h4>Ravenna</h4>
+                            <span class="distanza">45 minuti auto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Scuole e Servizi Educativi -->
+            <div class="scuole-section">
+                <h3>Scuole e Servizi Educativi</h3>
+                <p class="scuole-subtitle">Informazioni sulle scuole locali e relative distanze</p>
+                
+                <div class="scuole-grid">
+                    <!-- Asili Nido -->
+                    <div class="scuola-categoria">
+                        <div class="categoria-header">
+                            <div class="categoria-icon">🍼</div>
+                            <div>
+                                <h4>Asili Nido (0-3 anni)</h4>
+                                <p class="categoria-desc">Per i più piccoli</p>
+                            </div>
+                        </div>
+                        <div class="scuole-list">
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Nido Dalì</span>
+                                <span class="scuola-distanza">2 minuti a piedi</span>
+                            </div>
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Nido Matisse</span>
+                                <span class="scuola-distanza">8 minuti a piedi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scuole dell'Infanzia -->
+                    <div class="scuola-categoria">
+                        <div class="categoria-header">
+                            <div class="categoria-icon">🎨</div>
+                            <div>
+                                <h4>Scuole dell'Infanzia (3-6 anni)</h4>
+                                <p class="categoria-desc">Scuole materne</p>
+                            </div>
+                        </div>
+                        <div class="scuole-list">
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Scuola Infanzia Bruno Munari</span>
+                                <span class="scuola-distanza">3 minuti a piedi</span>
+                            </div>
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Scuola Infanzia Don Minzoni</span>
+                                <span class="scuola-distanza">5 minuti a piedi</span>
+                            </div>
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Scuola Infanzia Giotto di Bondone</span>
+                                <span class="scuola-distanza">12 minuti auto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scuole Primarie -->
+                    <div class="scuola-categoria">
+                        <div class="categoria-header">
+                            <div class="categoria-icon">📚</div>
+                            <div>
+                                <h4>Scuole Primarie (6-11 anni)</h4>
+                                <p class="categoria-desc">Scuole elementari</p>
+                            </div>
+                        </div>
+                        <div class="scuole-list">
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Scuola Primaria via XVIII Aprile</span>
+                                <span class="scuola-distanza">4 minuti a piedi</span>
+                            </div>
+                            <div class="scuola-item">
+                                <span class="scuola-nome">I.C. G. Bassani</span>
+                                <span class="scuola-distanza">6 minuti a piedi</span>
+                            </div>
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Scuola Primaria Consandolo</span>
+                                <span class="scuola-distanza">15 minuti auto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scuole Medie -->
+                    <div class="scuola-categoria">
+                        <div class="categoria-header">
+                            <div class="categoria-icon">🔬</div>
+                            <div>
+                                <h4>Scuole Medie (11-14 anni)</h4>
+                                <p class="categoria-desc">Secondarie di primo grado</p>
+                            </div>
+                        </div>
+                        <div class="scuole-list">
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Scuola Media G.B. Aleotti</span>
+                                <span class="scuola-distanza">5 minuti a piedi</span>
+                            </div>
+                            <div class="scuola-item">
+                                <span class="scuola-nome">Scuola Media Consandolo</span>
+                                <span class="scuola-distanza">15 minuti auto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scuole Superiori -->
+                    <div class="scuola-categoria">
+                        <div class="categoria-header">
+                            <div class="categoria-icon">🎓</div>
+                            <div>
+                                <h4>Scuole Superiori (14-18 anni)</h4>
+                                <p class="categoria-desc">Licei e istituti tecnici</p>
+                            </div>
+                        </div>
+                        <div class="scuole-list">
+                            <div class="scuola-item">
+                                <span class="scuola-nome">I.I.S. Rita Levi Montalcini</span>
+                                <span class="scuola-distanza">3 minuti a piedi</span>
+                            </div>
+                            <div class="scuola-item scuola-extra">
+                                <span class="scuola-nome">Liceo Scientifico + IPSIA</span>
+                                <span class="scuola-note">Stesso istituto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attrazioni">
+                <h3>Attrazioni Locali</h3>
+                <div class="attrazioni-grid">
+                    <div class="attrazione-item">
+                        <h4>Parco del Delta del Po</h4>
+                        <p>Patrimonio UNESCO, ideale per birdwatching e natura</p>
+                    </div>
+                    <div class="attrazione-item">
+                        <h4>Valli di Argenta</h4>
+                        <p>Riserva naturale con percorsi escursionistici</p>
+                    </div>
+                    <div class="attrazione-item">
+                        <h4>Ecomuseo di Argenta</h4>
+                        <p>Storia locale e tradizioni del territorio</p>
+                    </div>
+                    <div class="attrazione-item">
+                        <h4>Centro Storico</h4>
+                        <p>Architettura medievale e rinascimentale</p>
+                    </div>
+                    <div class="attrazione-item">
+                        <h4>Delizie Estensi</h4>
+                        <p>Castelli e ville storiche della zona</p>
+                    </div>
+                    <div class="attrazione-item">
+                        <h4>Comacchio</h4>
+                        <p>La piccola Venezia a 30 minuti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti -->
+    <section id="contatti" class="contatti-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contatti</h2>
+                <p class="section-subtitle">Siamo qui per assisterti</p>
+            </div>
+
+            <div class="contatti-content">
+                <div class="contatti-info">
+                    <div class="contatto-item">
+                        <h4>Informazioni Check-in/out</h4>
+                        <p><strong>Check-in:</strong> 15:00-20:00</p>
+                        <p><strong>Check-out:</strong> 08:00-11:00</p>
+                    </div>
+
+                    <div class="contatto-item">
+                        <h4>Contatti Diretti</h4>
+                        <p><strong>Telefono:</strong> +39 XXX XXX XXXX</p>
+                        <p><strong>Email:</strong> info@residenzagalis.it</p>
+                        <p><strong>WhatsApp:</strong> +39 XXX XXX XXXX</p>
+                    </div>
+
+                    <div class="contatto-item">
+                        <h4>Politiche</h4>
+                        <p><strong>Cancellazione gratuita:</strong> 48 ore prima</p>
+                        <p><strong>Deposito cauzionale:</strong> €100</p>
+                        <p><strong>Animali:</strong> Su richiesta</p>
+                        <p><strong>Fumo:</strong> Vietato</p>
+                    </div>
+                </div>
+
+                <div class="contatti-form">
+                    <h3>Invia un Messaggio</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label">Nome *</label>
+                            <input type="text" id="contact-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" id="contact-email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Telefono</label>
+                            <input type="tel" id="contact-phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Messaggio *</label>
+                            <textarea id="contact-message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Invia Messaggio</button>
+                    </form>
+
+                    <div class="whatsapp-cta">
+                        <a href="#" class="btn btn--secondary btn--full-width whatsapp-btn" onclick="openWhatsApp()">
+                            Contattaci su WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h3>Domande Frequenti</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            È incluso il parcheggio?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sì, il parcheggio gratuito è incluso nel prezzo del soggiorno.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Posso cucinare nell'appartamento?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Assolutamente sì! L'appartamento dispone di una cucina completamente attrezzata con tutti gli utensili necessari.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Quanto dista dall'ospedale?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>L'Ospedale Mazzolani-Vandini si trova a soli 5 minuti a piedi dall'appartamento.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Ci sono scuole vicine?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sì! Ci sono scuole di ogni ordine e grado nelle vicinanze, dalla scuola dell'infanzia al liceo, tutte raggiungibili a piedi in pochi minuti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Residenza Galis</h4>
+                    <p>Appartamento vacanze nel cuore di Argenta, Ferrara</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Collegamenti Rapidi</h4>
+                    <a href="#appartamento">Appartamento</a>
+                    <a href="#prenotazioni">Prenota</a>
+                    <a href="#zona">Zona</a>
+                    <a href="#contatti">Contatti</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <p>Email: info@residenzagalis.it</p>
+                    <p>Tel: +39 XXX XXX XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Residenza Galis. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success/Error Messages -->
+    <div id="message-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="message-title"></h3>
+            <p id="message-text"></p>
+            <button class="btn btn--primary" onclick="closeModal()">Chiudi</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
